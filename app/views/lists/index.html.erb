@@ -1,6 +1,3 @@
-<h1>Lists#index</h1>
-<p>Find me in app/views/lists/index.html.erb</p>
-
 <% @lists.each do |list| %>
 
   <p>タイトル</p>
@@ -9,10 +6,7 @@
   </span>
 
   <p>画像</p>
-  <% if list.image.attached? %>
-    <%= image_tag list.image, size: "200x200" %>
-  <% else %>
-    <%= image_tag 'no_image', size: "200x200" %>
-  <% end %>
+
+  <%= image_tag list.image, size: "200x200" %>
 
 <% end %>
